@@ -1,0 +1,43 @@
+{
+  "name": "claude-research-bot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Slack bot powered by Claude Managed Agents",
+  "type": "module",
+  "scripts": {
+    "build": "next build",
+    "check": "ultracite check",
+    "cma:archive": "node --import tsx scripts/cma/cli.ts archive",
+    "cma:setup": "node --import tsx scripts/cma/cli.ts setup",
+    "cma:update": "node --import tsx scripts/cma/cli.ts update",
+    "dev": "next dev",
+    "fix": "ultracite fix",
+    "knip": "knip",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "validate": "pnpm check && pnpm typecheck && pnpm knip && pnpm build"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.120.0",
+    "@chat-adapter/slack": "4.38.1",
+    "@chat-adapter/state-redis": "4.38.1",
+    "@vercel/connect": "1.0.0",
+    "chat": "4.38.1",
+    "next": "^16.2.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.9",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "knip": "^6.32.2",
+    "tsx": "^4.23.12",
+    "typescript": "^6.0.2",
+    "ultracite": "7.10.6"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

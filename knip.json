@@ -1,0 +1,10 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": [
+    "scripts/cma/setup.ts",
+    "scripts/cma/update.ts",
+    "scripts/cma/archive.ts"
+  ],
+  "ignoreBinaries": ["vercel"],
+  "ignoreDependencies": ["@biomejs/biome"]
+}
